@@ -1,0 +1,15 @@
+Q2. What is the time complexity of the following code snippet? 
+int a = 0;
+for (i = 0; i < N; i++) {
+ for (j = N; j > i; j--) {
+ a = a + i + j;
+ }
+}
+Answer:-> O(N*N)
+
+
+The above code runs total no of times 
+= N + (N – 1) + (N – 2) + … 1 + 0 
+= N * (N + 1) / 2 
+= 1/2 * N^2 + 1/2 * N 
+O(N^2) times.
