@@ -34,8 +34,7 @@ public class problem_3 {
         // current is included, put next at next location
         data[index] = arr[i];
         combination(arr, n, r, index + 1, data, i + 1);
-        // current is excluded, replace it with next (Note that i+1 is passed, but index
-        // is not changed)
+        // current is excluded, replace it with next (Note that i+1 is passed, but index is not changed)
         combination(arr, n, r, index, data, i + 1);
     }
 }
