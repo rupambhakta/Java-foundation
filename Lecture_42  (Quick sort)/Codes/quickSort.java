@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class quickSort {
     static void display(int arr[]) {
         for (int i : arr) {
@@ -12,7 +14,10 @@ public class quickSort {
     }
 
     static int partition(int arr[], int st, int end) {
-        int pivot = arr[st];
+        Random rand = new Random(); // Generating random number
+        int n = rand.nextInt(arr.length);
+        // System.out.println(n);
+        int pivot = arr[n];
         int count = 0;
         for (int i = st + 1; i <= end; i++) {
             if (arr[i] <= pivot) {
@@ -46,7 +51,7 @@ public class quickSort {
     }
 
     public static void main(String[] args) {
-        int arr[] = { 1, 3,3, 2, 5,5, 4, 6 };
+        int arr[] = { 1, 3, 2, 5, 4, 6 };
         System.out.println("Array before sorting: ");
         display(arr);
         System.out.println();
