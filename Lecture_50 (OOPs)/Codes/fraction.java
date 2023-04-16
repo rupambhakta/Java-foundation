@@ -8,11 +8,23 @@ public class fraction {
         return y;
     }
 
-    public static Fraction add(Fraction f1, Fraction f2) {
+    public static void simplyfly(Fraction f1) { // Global Use
+        int hcf = gcd(f1.num, f1.den);
+        f1.num /= hcf;
+        f1.den /= hcf;
+    }
+
+    public static Fraction add(Fraction f1, Fraction f2) { // Ans stored in another variable
         int numerator = f1.num * f2.den + f2.num * f1.den;
         int denominator = f1.den * f2.den;
         Fraction f3 = new Fraction(numerator, denominator);
         return f3;
+    }
+    public static void Add(Fraction f1,Fraction f2){ // Ans stored in f1
+        f1.num = f1.num*f2.den + f2.num * f1.den;
+        f1.den = f1.den * f2.den;
+        simplyfly(f1);
+        System.out.println(f1.num+"/"+f1.den);
     }
     public static Fraction multiply(Fraction f1, Fraction f2) {
         int numerator = f1.num * f2.num;
@@ -53,8 +65,9 @@ public class fraction {
     public static void main(String[] args) {
         Fraction f1 = new Fraction(2, 4);
         Fraction f2 = new Fraction(2, 4);
-        Fraction f4 = add(f1, f2);
-        System.out.println(f4.num + "/" + f4.den);
+        // Fraction f4 = add(f1, f2);
+        // System.out.println(f4.num + "/" + f4.den);
+        Add(f1, f2);
         Fraction f3 = multiply(f1, f2);
         System.out.println(f3.num + "/" + f3.den);
         Fraction f5= substruct(f1, f2);
