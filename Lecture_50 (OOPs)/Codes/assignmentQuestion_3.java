@@ -7,7 +7,7 @@ public class assignmentQuestion_3{
         String rollNumber;
         String mobileNumber;
         public student(){
-
+            
         }
 
         public student(String name, String rollNumber, String mobileNumber) {
