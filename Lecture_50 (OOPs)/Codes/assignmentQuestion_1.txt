@@ -1,0 +1,21 @@
+What are the differences between class and object ?
+
+In object-oriented programming, a class is a blueprint or a template that defines the characteristics and behavior of a particular type of object. An object, on the other hand, is an instance of a class that has been created and exists in memory at runtime.
+
+Here are some key differences between classes and objects:
+
+    Definition: A class is a blueprint or a template that defines the characteristics and behavior of a particular  type of object, while an object is an instance of a class.
+
+    Memory: A class is stored in the program's memory, while an object is created at runtime and exists in memory while the program is running.
+
+    Variables: A class can have member variables that define the state of the objects created from that class. Objects created from the same class can have different values for these member variables.
+
+    Methods: A class can have member methods that define the behavior of the objects created from that class. Objects created from the same class can invoke these methods with different arguments.
+
+    Inheritance: A class can inherit properties and methods from a parent class, while an object cannot inherit anything from another object.
+
+    Construction: A class can have a constructor method that is called when an object is created from that class. The constructor can initialize the object's member variables.
+
+    Scope: A class can have public, protected, and private member variables and methods, which determine their accessibility from outside the class. Objects can only access public methods and variables.
+
+In summary, a class defines the blueprint or template for creating objects of a particular type, while an object is a specific instance of a class with its own set of values for member variables.
