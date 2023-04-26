@@ -1,0 +1,46 @@
+Q6. Why do we need a constructor ? Explain with the help of an example. 
+
+In object-oriented programming, a constructor is a special method that is called when an object is created. The purpose of a constructor is to initialize the object's member variables to default or user-defined values.
+
+Here's an example to illustrate why we need a constructor:
+class Car {
+  private String make;
+  private String model;
+  private int year;
+  
+  public Car(String make, String model, int year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+  }
+  
+  public String getMake() {
+    return make;
+  }
+  
+  public String getModel() {
+    return model;
+  }
+  
+  public int getYear() {
+    return year;
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Car myCar = new Car("Toyota", "Corolla", 2021);
+    System.out.println("Make: " + myCar.getMake());
+    System.out.println("Model: " + myCar.getModel());
+    System.out.println("Year: " + myCar.getYear());
+  }
+}
+
+
+In this example, we have defined a class called Car with three private member variables: make, model, and year. We have also defined a constructor that takes three parameters (make, model, and year) and initializes the member variables with those values using the this keyword.
+
+In the main method, we create a new Car object called myCar by calling the constructor with the values "Toyota", "Corolla", and 2021. We then use the getMake, getModel, and getYear methods to retrieve the values of the member variables and print them to the console.
+
+Without a constructor, we would have to manually set the values of the member variables after creating the object, which would be cumbersome and error-prone. The constructor allows us to initialize the object's state in a single step, making our code more concise and less error-prone.
+
+In summary, we need a constructor to initialize an object's member variables to default or user-defined values in a single step, which makes our code more concise and less error-prone.
