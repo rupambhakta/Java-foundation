@@ -1,0 +1,3 @@
+Q8. Why constructors in java cannot be static ?
+
+Constructors in Java cannot be static because the purpose of a constructor is to initialize the instance variables of an object, and static methods or variables belong to the class itself, rather than to any particular instance of the class.
