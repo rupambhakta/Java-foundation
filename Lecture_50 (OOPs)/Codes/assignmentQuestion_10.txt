@@ -1,0 +1,86 @@
+Q10. What is constructor chaining? Explain with example. 
+-->
+
+Constructor chaining is a mechanism in Java where one constructor can call another constructor in the same class or in its parent class. This allows us to reuse code and avoid duplicating code across multiple constructors.
+
+In constructor chaining, the this keyword is used to call another constructor within the same class, while the super keyword is used to call a constructor in the parent class.
+
+Here's an example of constructor chaining:
+public class Vehicle {
+    private String make;
+    private String model;
+    private int year;
+    
+    public Vehicle() {
+        this("Unknown", "Unknown", 0);
+    }
+    
+    public Vehicle(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+    
+    public String getMake() {
+        return make;
+    }
+    
+    public String getModel() {
+        return model;
+    }
+    
+    public int getYear() {
+        return year;
+    }
+}
+
+public class Car extends Vehicle {
+    private String color;
+    private int numDoors;
+    
+    public Car() {
+        this("Unknown", "Unknown", 0, "Unknown", 0);
+    }
+    
+    public Car(String make, String model, int year, String color, int numDoors) {
+        super(make, model, year);
+        this.color = color;
+        this.numDoors = numDoors;
+    }
+    
+    public String getColor() {
+        return color;
+    }
+    
+    public int getNumDoors() {
+        return numDoors;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new Car("Toyota", "Camry", 2021, "Red", 4);
+        System.out.println("Make: " + myCar.getMake());
+        System.out.println("Model: " + myCar.getModel());
+        System.out.println("Year: " + myCar.getYear());
+        System.out.println("Color: " + myCar.getColor());
+        System.out.println("Number of doors: " + myCar.getNumDoors());
+    }
+}
+
+
+In this example, we have a Vehicle class with two constructors: a no-argument constructor that calls another constructor within the same class using the this keyword, and a three-argument constructor that initializes the make, model, and year variables.
+
+We also have a Car class that extends Vehicle and has two constructors: a no-argument constructor that calls another constructor within the same class using the this keyword, and a five-argument constructor that initializes the make, model, year, color, and numDoors variables. In the five-argument constructor, we also call the parent class constructor using the super keyword to initialize the make, model, and year variables.
+
+In the main method, we create a new Car object called myCar using the five-argument constructor and print out its attributes using the various getter methods.
+
+The output of this program should be:
+
+Make: Toyota
+Model: Camry
+Year: 2021
+Color: Red
+Number of doors: 4
+
+By using constructor chaining, we were able to reuse code and avoid duplicating the initialization of the make, model, and year variables in the Car class constructor.
