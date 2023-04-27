@@ -1,0 +1,11 @@
+Q11. Why is the main() method in Java always static?
+
+In Java, the `main()` method is always declared as static because it needs to be invoked by the JVM (Java Virtual Machine) before any objects are created. This means that the `main()` method should be available even before the creation of an instance of the class containing it.
+
+When a Java program is run, the JVM looks for the `main()` method as the entry point of the program. It then invokes this method using the class name and passes the command line arguments as a parameter. If the `main()` method is not declared as static, the JVM would need to create an instance of the class to invoke the method, which would not be possible before the `main()` method is executed.
+
+By declaring the `main()` method as static, we can call it directly without having to create an instance of the class. This allows the JVM to invoke the `main()` method before any objects are created, and before any non-static methods or instance variables can be used.
+
+Additionally, the `main()` method is usually defined in the `public` class of the program, which is also required to have a `public` static method that serves as the entry point for the program.
+
+Therefore, the `main()` method in Java is always declared as `public static void main(String[] args)` to ensure that it can be accessed by the JVM without needing to create an instance of the class, and to serve as the entry point for the program.
