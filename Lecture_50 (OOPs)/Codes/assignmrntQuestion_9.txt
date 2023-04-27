@@ -1,0 +1,5 @@
+Q9. What is a destructor? Do we have destructors in java?
+
+A destructor is a special method that is automatically invoked when an object is destroyed or goes out of scope. It is used to release any resources that the object may have acquired during its lifetime, such as memory, file handles, network connections, etc.
+
+In Java, there is no equivalent of a destructor as it has a garbage collector that automatically manages memory deallocation. When an object is no longer referenced, the garbage collector will free the memory used by that object. However, in Java, you can implement the finalize() method in a class, which is called by the garbage collector before an object is garbage collected. This method can be used to release any resources held by the object before it is destroyed, but it is generally recommended to use other methods like try-with-resources or explicit close() method calls for resource management, rather than relying on the finalize() method.
