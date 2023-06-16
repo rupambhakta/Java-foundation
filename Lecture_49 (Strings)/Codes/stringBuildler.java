@@ -5,9 +5,9 @@ public class stringBuildler {
         str.append("World");
         // System.out.println(str);
         // str.setCharAt(0, 'm');
-        str.insert(2, 'y');
-        System.out.println(str);
-        str.delete(2,3);
+        str.insert(0, 'y');
+        // System.out.println(str);
+        // str.delete(str.length()-1,str.length());
         System.out.println(str);
     }
 }
