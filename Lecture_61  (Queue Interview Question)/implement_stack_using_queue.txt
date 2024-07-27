@@ -1,2 +1,3 @@
 //leetcode q. no 225
 https://leetcode.com/problems/implement-stack-using-queues/submissions/
+//34 min
