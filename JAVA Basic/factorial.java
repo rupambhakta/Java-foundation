@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 class factorial {
     public static int calculateFactorial(int n) {
-        if(n==0){
+        if (n == 0) {
             return 1;
         }
-        int factorial = calculateFactorial(n-1);
+        int factorial = n * calculateFactorial(n - 1);
         return factorial;
     }
 
