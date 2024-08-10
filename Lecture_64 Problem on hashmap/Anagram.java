@@ -16,6 +16,7 @@ public class Anagram {
         return mp;
     }
 
+    // First Approach
     public boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) {
             return false;
@@ -26,7 +27,31 @@ public class Anagram {
 
     }
 
+    // Second Approach
+    public static boolean isAnagram2(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        HashMap<Character, Integer> mp = makeFreqMap(s);
+        for (int i = 0; i < t.length(); i++) {
+            Character ch = t.charAt(i);
+            if (!mp.containsKey(ch)) {
+                return false;
+            }
+            int currFreq = mp.get(ch);
+            mp.put(ch, currFreq - 1);
+        }
+        for (Integer i : mp.values()) {
+            if (i != 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
+        // call the isAnagram function
+        System.out.println(isAnagram2("rupam", "rupamb"));
 
     }
 }
